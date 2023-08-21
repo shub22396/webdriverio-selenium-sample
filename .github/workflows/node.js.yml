@@ -27,8 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install selenium-webdriver 
-    - run: export LT_USERNAME="shubhamr"
-    - run: export LT_ACCESS_KEY="dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh"
+    - run: export LT_USERNAME=shubham
+    - run: export LT_ACCESS_KEY=dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh
     - run: npm install webdriverio
     - run: npm i
     - run: npm install
