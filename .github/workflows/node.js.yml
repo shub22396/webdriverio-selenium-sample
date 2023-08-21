@@ -13,11 +13,16 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+  env:
+      LT_USERNAME=shubham
+      LT_ACCESS_KEY=dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh
 
     strategy:
       matrix:
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        
+   
 
     steps:
     - uses: actions/checkout@v3
@@ -27,8 +32,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install selenium-webdriver 
-    - run: export LT_USERNAME=shubham
-    - run: export LT_ACCESS_KEY=dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh
     - run: npm install webdriverio
     - run: npm i
     - run: npm install
