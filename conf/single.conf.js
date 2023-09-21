@@ -22,7 +22,8 @@ exports.config = {
       browserName: "chrome",
       version: "latest",
       name: "Test WebdriverIO Single",
-      build: "WebDriver Selenium Sample"
+      build: "WebDriver Selenium Sample",
+      webSocketurl:true,
     }
     }],
   logLevel: "info",
