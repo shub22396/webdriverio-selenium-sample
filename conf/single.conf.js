@@ -23,7 +23,8 @@ exports.config = {
       version: "latest",
       name: "Test WebdriverIO Single",
       build: "WebDriver Selenium Sample",
-      webSocketurl:true,
+     selenium_version:"4.0.0",
+        seCdp:true,
     }
     }],
   logLevel: "info",
