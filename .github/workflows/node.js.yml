@@ -18,7 +18,7 @@ jobs:
 
     - name: start
       run: |
-        docker run --name lambdatest-tunnel -e LT_USERNAME='shubhamr' -e LT_ACCESS_KEY=' dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh' lambdatest/tunnel:latest
+        docker run --name lambdatest-tunnel -e LT_USERNAME='shubhamr' -e LT_ACCESS_KEY='dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh' lambdatest/tunnel:latest
    
 
   
