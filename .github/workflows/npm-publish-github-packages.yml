@@ -1,10 +1,8 @@
-
 name: LambdaTest Tunnel Workflow
 
 on:
   schedule:
-    # This is in UTC, which is IST - 5:30 hours. So, 03:40 IST is 22:10 UTC.
-    - cron: '16 22 * * *'
+    - cron: '20 22 * * *'  # This is in UTC, which is 03:40 IST
 
 jobs:
   lambdatest-tunnel:
@@ -18,6 +16,7 @@ jobs:
       run: |
         docker pull lambdatest/tunnel
         sleep 15
+
     - name: Start Tunnel
       run: |
         docker run --name lambdatest-tunnel -e LT_USERNAME='shubhamr' -e LT_ACCESS_KEY='dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh' lambdatest/tunnel:latest
