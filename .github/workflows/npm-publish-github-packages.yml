@@ -2,7 +2,7 @@ name: LambdaTest Tunnel Workflow
 
 on:
   schedule:
-    - cron: '20 22 * * *'  # This is in UTC, which is 03:40 IST
+    - cron: '30 10 * * *'  # This is in UTC, which is 4:00 PM IST
 
 jobs:
   lambdatest-tunnel:
