@@ -1,0 +1,22 @@
+name: LambdaTest My
+
+on:
+  schedule:
+    - cron: '30 10 * * *'  # This is in UTC, which is 4:00 PM IST
+
+jobs:
+  lambdatest-tunnel:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Environment
+      run: |
+        docker pull lambdatest/tunnel
+        sleep 15
+
+    - name: Start Tunnel
+      run: |
+        docker run --name lambdatest-tunnel -e LT_USERNAME='shubhamr' -e LT_ACCESS_KEY='dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh' lambdatest/tunnel:latest
