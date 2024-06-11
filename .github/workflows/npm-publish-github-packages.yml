@@ -2,10 +2,9 @@
 name: LambdaTest Tunnel Workflow
 
 on:
-  push:
   schedule:
     # This is in UTC, which is IST - 5:30 hours. So, 03:40 IST is 22:10 UTC.
-    - cron: '15 22 * * *'
+    - cron: '16 22 * * *'
 
 jobs:
   lambdatest-tunnel:
